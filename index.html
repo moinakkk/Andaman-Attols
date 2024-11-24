@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANDAMAN ATTOLS</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" href="./files/logo.png" type="image/x-icon" >
+    <link href='https://unpkg.com/boxicons/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<style>
+
+            .phone-link {
+            position: relative;
+            display: inline-block;
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .phone-link::after {
+            content: "Give Us a Call";
+            position: absolute;
+            bottom: -40px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            background: #333;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            white-space: nowrap;
+            opacity: 0;
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        }
+
+        .phone-link:hover::after {
+            transform: translateX(-50%) scale(1);
+            opacity: 1;
+        }
+
+        .phone-link:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+
+
+        .dark-mode .card {
+            background-color: #2c2c2c;
+            border-color: #444;
+        }
+
+        .dark-mode .form-control {
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #444;
+        }
+
+        .dark-mode .btn-submit {
+            color: #e0e0e0;
+        }
+
+        .dark-mode .footer {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+        }
+        .moon {
+          border-radius: 10px;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .banner video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .logo {
+            margin: 10px;
+        }
+        nav {
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Slightly transparent background */
+    z-index: 1000; /* Ensures the navbar stays above other elements */
+    padding: 10px 0;
+}
+
+.banner .content {
+    padding-top: 80px; /* Adds space below the fixed navbar */
+}
+
+
+
+
+
+
+
+        .title {
+            margin-top: 50px;
+        }
+
+        .title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .locations,
+        .package {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .package-title {
+            margin-bottom: 30px;
+        }
+
+        .location-content,
+        .package-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; /* Adjusts spacing between columns */
+        }
+
+            .dark-mode .col-content {
+                background-color: white; /* Same as .box in dark mode */
+                border: 1px solid #444; /* Match border style */
+                color: black; /* Text color for dark mode */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ensure shadow matches */
+                transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .dark-mode .col-content h4 {
+                color: black; /* Text color for headings */
+            }
+
+            .col-content {
+                background-color: #f9f9f9; /* Match light mode color */
+                border: 1px solid #ddd; /* Match border style */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border-radius: 10px;
+            }
+
+            .col-content:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Match hover effect */
+            }
+
+        .box {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 10px;
+        }
+
+            .box img {
+                width: 100%;
+                height: 250px; /* Sets uniform height */
+                object-fit: cover; /* Ensures images are contained within the set dimensions */
+                border-radius: 8px;
+            }
+
+            .box h3, .box h4 {
+                text-align: center;
+                margin: 10px 0;
+            }
+            .package-title {
+                text-align: center;
+                margin-top: 20px;
+                text-decoration: underline;
+            }
+
+            .package-title h2 {
+                font-size: 2em;
+                margin-bottom: 20px;
+                text-underline: black;
+            }
+
+            /* Grid layout for packages */
+            .package-content {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                padding: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            /* Styling for each package box */
+            .box {
+                background-color: #f9f9f9;
+                border: 1px solid #ddd;
+                padding: 10px;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                text-align: center;
+
+            }
+
+            .green-escape {
+                grid-column: 2/3;
+                grid-row: 5/6;
+            }
+
+            /* Uniform image styling */
+            .image img {
+                width: 100%;
+                height: 250px; /* Fixed height for uniformity */
+                object-fit: cover;
+                transition: transform 0.3s ease;
+                border-radius: 8px;
+            }
+
+            /* Hover animation for the box */
+            .box:hover {
+                transform: scale(1.05); /* Slight enlargement */
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+            }
+
+            .box:hover .image img {
+                transform: scale(1.1); /* Zoom effect on image */
+            }
+
+            h3, h4 {
+                margin: 10px 0;
+                color: black;
+            }
+
+
+
+
+        .end {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .col-content,
+            .box {
+                width: 100%;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .title h1 {
+                font-size: 2.5em;
+            }
+
+            .title p {
+                font-size: 1em;
+            }
+
+
+
+            .banner {
+                padding-bottom: 50px;
+            }
+
+            .button {
+                margin-top: 0;
+            }
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: black;
+            color: #e0e0e0;
+        }
+            /* Review Section Specific Styling */
+            body.dark-mode #reviews {
+                background-color: black; /* Dark background for review section */
+                color: #e0e0e0;           /* Lighter text for contrast */
+            }
+
+            body.dark-mode .review-card {
+                background-color: black; /* Card background in dark mode */
+                border: 1px solid #444;    /* Subtle border for separation */
+                color: #dcdcdc;            /* Text color inside cards */
+            }
+
+            body.dark-mode .review-card span {
+                color: red;            /* Gold stars for reviews */
+            }
+            body.dark-mode .review-card h4 {
+                color: white;            /* Gold stars for reviews */
+            }
+
+            /* Default (Light Mode) Review Styling */
+            .reviews-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+
+            .review-card {
+                width: 30%;
+                background: white;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 20px;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+                color: #333;
+            }
+
+            .review-card span {
+                color: red; /* Golden stars in light mode */
+            }
+
+        .dark-mode .card {
+            background-color: black;
+            border-color: #444;
+        }
+
+        .dark-mode .form-control {
+            background-color: black;
+            color: #fff;
+            border: 1px solid #444;
+        }
+
+        .dark-mode .btn-submit {
+            color: #e0e0e0;
+        }
+
+        .dark-mode .footer {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .locations {
+            background-color: black;
+            color: #e0e0e0;
+        }
+
+        .moon {
+            border-radius: 10px;
+        }
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: transparent; /* Adjust color as needed */
+    color: white;
+}
+
+.logo {
+    width: 60px;
+
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.navbar li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: white; /* Adjust color as needed */
+    font-size: 24px; /* Default font size */
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: font-size 0.3s ease;
+}
+
+#dark-mode-toggle {
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex: 1;
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        justify-content: flex-start; /* Align items to start */
+    }
+
+    .navbar a {
+        margin: 0 5px; /* Reduce margin for smaller screens */
+        font-size: 14px; /* Smaller font size for smaller screens */
+    }
+
+    #dark-mode-toggle {
+        margin-left: 10px; /* Adjust margin for the icon */
+    }
+}
+            .locations {
+                padding: 20px;
+                background-color: #f8f8f8; /* Optional: a light background for contrast */
+            }
+
+            .package-title {
+                text-align: center;
+                margin-bottom: 20px;
+
+            }
+
+
+
+            .location-image {
+                width: 100%; /* Make image fill the column */
+                height: 100%; /* Maintain aspect ratio */
+                object-fit: cover; /* Ensure the image covers the area without distortion */
+                border-radius: 10px; /* Optional: adds rounded corners */
+            }
+
+            h5 {
+                margin-top: 10px; /* Space between the image and the text */
+                font-size: 18px; /* Optional: Adjust font size */
+                font-weight: bold; /* Optional: Make text bold */
+            }
+
+            .popular-tag {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background-color: #ff5722; /* Bright color for visibility */
+                color: #fff;
+                padding: 5px 10px;
+                font-size: 12px;
+                font-weight: bold;
+                border-radius: 4px;
+                z-index: 10;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better aesthetics */
+            }
+ .budget-tag {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background-color: green; /* Bright color for visibility */
+                color: #fff;
+                padding: 5px 10px;
+                font-size: 12px;
+                font-weight: bold;
+                border-radius: 4px;
+                z-index: 10;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better aesthetics */
+            }
+
+            .trending-tag {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background-color: blue; /* Bright color for visibility */
+                color: #fff;
+                padding: 5px 10px;
+                font-size: 12px;
+                font-weight: bold;
+                border-radius: 4px;
+                z-index: 10;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better aesthetics */
+            }
+
+                .tagline-moinak {
+                    font-family: 'Arial', sans-serif; /* Modern and elegant font */
+                    font-size: 1.8em; /* Larger font size */
+                    font-weight: bold; /* Bold to make it stand out */
+                    text-align: center; /* Center-align the text */
+                    color: #1a73e8; /* Text color */
+                    letter-spacing: 1px; /* Slight spacing between letters */
+                    line-height: 1.5; /* Space between lines if wrapped */
+                    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient background */
+                    border-radius: 5px; /* Rounded corners */
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+                    text-transform: uppercase; /* Uppercase for emphasis */
+                    display: inline-block; /* Makes the background fit the text size */
+                    padding: 5px 10px; /* Small padding to make the background hug the text */
+                    margin: 20px auto; /* Center with space around */
+                }
+
+
+
+</style>
+<body>
+
+<!-- Background Video & Header -->
+
+    <div class="banner">
+            <video src="./files/bgvid.mp4" type="video/mp4" autoplay muted loop></video>
+    <!-- Header -->
+
+    <div class="content" id="home">
+        <nav>
+            <img src="./files/logo.jpg" class="logo" alt="Logo" style="width: 60px;">
+            <ul class="navbar">
+                <li>
+                    <a href="#home">Home</a>
+                    <a href="#locations">Locations</a>
+                    <a href="#package">Packages</a>
+                    <a href="./about.html">About Us</a>
+                    <img id="dark-mode-toggle" class="btn-submit" src="https://img.icons8.com/?size=100&id=20015&format=png&color=000000" alt="Dark Mode Toggle" width="30px">
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="title">
+            <h1>ANDAMAN ATTOLS</h1>
+            <p>Plan your trip with us and travel around the Islands with the most affordable to luxurious packages!</p>
+            <a href="./register.html" class="button">Book Now!</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- Locations -->
+<section class="locations" id="locations">
+    <div class="package-title">
+        <h2>LOCATIONS</h2>
+    </div>
+
+    <div class="location-content">
+        <div class="col-content">
+            <img src="./files/Havelock.avif" alt="Havelock" class="location-image">
+            <h4>Havelock</h4>
+        </div>
+        <div class="col-content">
+            <img src="./files/NeilIsland.jpg" alt="Neil" class="location-image">
+            <h4>Neil</h4>
+        </div>
+        <div class="col-content">
+            <img src="./files/l7.jpg" alt="Port Blair" class="location-image">
+            <h4>Port Blair</h4>
+        </div>
+        <div class="col-content">
+            <img src="./files/baratang.jpg" alt="Baratang" class="location-image">
+            <h4>Baratang</h4>
+        </div>
+        <div class="col-content">
+            <img src="./files/Rangat.jpg" alt="Rangat" class="location-image">
+            <h4>Rangat</h4>
+        </div>
+        <div class="col-content">
+            <img src="./files/diglipur.jpg" alt="Diglipur" class="location-image">
+            <h4>Diglipur</h4>
+        </div>
+    </div>
+</section>
+
+
+<!-- Best of Andaman -->
+
+<section class="package" id="package">
+
+    <div class="package-title">
+        <h2>BEST OF ANDAMAN</h2>
+    </div>
+
+    <div class="package-content">
+
+        <!-- Package boxes with images -->
+        <div class="box">
+            <div class="image">
+                <a href="exoticAndaman.html"><img src="./files/exoticc.jpg" alt="Exotic Andaman"></a>
+                <h3>18,000/-</h3>
+                <h4>EXOTIC ANDAMAN</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <span class="popular-tag">Most Popular</span>
+                <a href="unexploredAndaman.html"><img src="./files/unexplore.jpg" alt="Unexplored Andaman"></a>
+                <h3>55,000/-</h3>
+                <h4>UNEXPLORED ANDAMAN</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <a href="ExploredPortBlair.html"><img src="./files/explor-portblair.jpg" alt="Exotic Andaman"></a>
+                <h3>27,000/-</h3>
+                <h4>EXPLORE PORT BLAIR</h4>
+            </div>
+        </div> <div class="box">
+            <div class="image">
+                <span class="trending-tag">Trending</span>
+                <a href="ExploreAndaman.html"><img src="./files/explore.jpg" alt="Exotic Andaman"></a>
+                <h3>35,000/-</h3>
+                <h4>EXPLORE ANDAMAN</h4>
+            </div>
+        </div> <div class="box">
+            <div class="image">
+                <a href="weekendAnd.html"><img src="./files/short.jpg" alt="Exotic Andaman"></a>
+                <h3>19,000/-</h3>
+                <h4>WEEKEND ANDAMAN</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <a href="TropicalIslands.html"><img src="./files/tropicall.webp" alt="Tropical Andaman"></a>
+                <h3>41,500/-</h3>
+                <h4>TROPICAL ANDAMAN</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <a href="AdventureDelight.html"><img src="./files/adventure.jpg" alt="Adventure Delight"></a>
+                <h3>22,000/-</h3>
+                <h4>ADVENTURE DELIGHT</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <a href="baratang.html"><img src="./files/baratang.webp" alt="Baratang Special"></a>
+                <h3>23,000/-</h3>
+                <h4>BARATANG SPECIAL</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <a href="unseenAndaman.html"><img src="./files/unseenandaman.jpg" alt="Unseen Andaman"></a>
+                <h3>25,000/-</h3>
+                <h4>UNSEEN ANDAMAN</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <a href="runaway.html"><img src="./files/runawayandaman.jpg" alt="Runaway Andaman"></a>
+                <h3>24,000/-</h3>
+                <h4>RUNAWAY ANDAMAN</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <a href="elegantAndaman.html"><img src="./files/elegantamndaman.jpg" alt="Elegant Andaman"></a>
+                <h3>27,000/-</h3>
+                <h4>ELEGANT ANDAMAN</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <span class="budget-tag">Budget Friendly</span>
+                <a href="heritage.html"><img src="./files/heritageandaman.jpg" alt="Heritage Andaman"></a>
+                <h3>17,000/-</h3>
+                <h4>HERITAGE ANDAMAN</h4>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <a href="Magical.html"><img src="./files/magicalandamannn.jpg" alt="Magical Andaman Experience"></a>
+                <h3>30,000/-</h3>
+                <h4>Magical Andaman Experience</h4>
+            </div>
+        </div>
+        <div class="dest-content">
+
+        </div>
+
+        <div class="box green-escape " >
+            <div class="image">
+                <a href="greenescape.html"><img src="./files/green.jpg" alt="Magical Andaman Experience"></a>
+                <h3>23,000/-</h3>
+                <h4>Green Escape Andaman</h4>
+            </div>
+        </div>
+        <div class="dest-content">
+
+        </div>
+        </div>
+    </section>
+
+
+    <section class="packages">
+        <div class="package-title">
+            <h2>HONEYMOON PACKAGES</h2>
+        </div>
+
+        <div class="package-content">
+            <!-- Package Box 1 -->
+            <div class="box" >
+                <div class="image">
+                    <a href="honeymoonSpecial.html">
+                        <img src="./files/honeymoon-delights1.jpg" alt="Honeymoon Delight Image 1">
+                    </a>
+                    <h3>46,000/-</h3>
+                    <span class="popular-tag">Most Popular</span>
+                    <h4>HONEYMOON SPECIAL ANDAMAN</h4>
+                </div>
+            </div>
+
+            <!-- Package Box 2 -->
+            <div class="box">
+                <div class="image">
+                    <a href="Honeymoon.html">
+                        <img src="./files/honey.webp" alt="Honeymoon Delight Image 2">
+                    </a>
+                    <h3>Rs. 35,000/-</h3>
+                    <h4>HONEYMOON DELIGHT</h4>
+                </div>
+            </div>
+
+            <!-- Package Box 3 -->
+            <div class="box">
+                <div class="image">
+                    <span class="budget-tag">Budget Freindly</span>
+                    <a href="honeymoonBliss.html">
+                        <img src="./files/honemoon-bonanza.jpeg" alt="Honeymoon Delight Image 2">
+                    </a>
+                    <h3>Rs. 30,000/-</h3>
+                    <h4>HONEYMOON BLISS</h4>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<!-- Review -->
+<section id="reviews" style="padding: 50px;">
+    <h2 style="text-align: center; margin-bottom: 30px; text-decoration: underline;">GUEST'S REVIEWS</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        <!-- Review 1 -->
+        <div class="review-card">
+            <h4>Rajesh Gupta</h4>
+            <p>"The arrangements were excellent! The sunset view at Radhanagar Beach was breathtaking."</p>
+            <span>★★★★★</span>
+        </div>
+        <!-- Review 2 -->
+        <div class="review-card">
+            <h4>Meera Sharma</h4>
+            <p>"Great experience overall. However, the transport could have been a bit more comfortable."</p>
+            <span>★★★★★</span>
+        </div>
+        <!-- Review 3 -->
+        <div class="review-card">
+            <h4>Ankit Verma</h4>
+            <p>"The scuba diving was the highlight of the trip! The guides were knowledgeable and friendly."</p>
+            <span>★★★★★</span>
+        </div>
+        <!-- Review 4 -->
+        <div class="review-card">
+            <h4>Priya Nair</h4>
+            <p>"The tour was well-organized. My kids loved the ferry rides and the water sports activities."</p>
+            <span>★★★★★</span>
+        </div>
+        <!-- Review 5 -->
+        <div class="review-card">
+            <h4>Sunil Reddy</h4>
+            <p>"Affordable and well-planned. The food options on Havelock Island could be better, though."</p>
+            <span>★★★★☆</span>
+        </div>
+        <!-- Review 6 -->
+        <div class="review-card">
+            <h4>Aditi Patel</h4>
+            <p>"The candlelight dinner at the beach was magical! A perfect honeymoon experience."</p>
+            <span>★★★★★</span>
+        </div>
+        <!-- Review 7 -->
+        <div class="review-card">
+            <h4>Vikram Malhotra</h4>
+            <p>"The resort booking was seamless, and the local tour guide was very informative."</p>
+            <span>★★★★☆</span>
+        </div>
+        <!-- Review 8 -->
+        <div class="review-card">
+            <h4>Deepa Iyer</h4>
+            <p>"We enjoyed exploring the coral reefs. A little more time at Ross Island would have been nice."</p>
+            <span>★★★★★</span>
+        </div>
+        <!-- Review 9 -->
+        <div class="review-card">
+            <h4>Karan Joshi</h4>
+            <p>"Excellent service! The team went above and beyond to make our anniversary special."</p>
+            <span>★★★★★</span>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+
+<section class="footer">
+    <div class="foot">
+        <div class="footer-content">
+            <div class="footlinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./register.html">Register</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./files/Terms.pdf" download="Terms & Conditions.pdf">Terms & Conditions</a></li>
+                    <li><a href="./files/INCLUDES , EXCLUDES (2).pdf" download="Includes & Excludes.pdf">Includes & Excludes</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Connect</h4>
+                <div class="social">
+                    <a href="https://www.instagram.com/andaman_attols?igsh=ZjdmZDdyNW1zYzVt&utm_source=qr" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://wa.me/917063927931" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="mailto:andamanattols@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+                </div>
+            </div>
+
+            <div class="footlinks">
+                <a href="review.html"><h4>REVIEW</h4></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="end">
+        <p>Copyright © 2024 Andaman Attols All Rights Reserved.<br>Website developed by Andaman Attols</p>
+        <p class="tagline-moinak">"Making Dreams Come True, One Destination At A Time"</p>
+
+    </div>
+</section>
+    <script>
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        darkModeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
+
+</body>
+</html>

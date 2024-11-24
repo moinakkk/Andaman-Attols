@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" href="./files/logo-modified.png" type="image/x-icon" >
+
+</head>
+<style>
+   .card {
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-control {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+    height: 8vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    width: 50%;
+    background-color: red;
+    border-radius: 10px;
+    height: 5vh;
+    margin-top: 20px;
+    color: white;
+    font-size: large;
+}
+
+.message-box {
+    resize: vertical;
+    min-height: 100px;
+}
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.side-content, .leave-reply {
+    flex: 1;
+    min-width: 300px; /* Adjust based on your layout */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .side-content, .leave-reply {
+        width: 100%;
+        padding: 0;
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.price-animated {
+    display: inline-block;
+    transition: transform 1s ease-in-out, opacity 0.3s ease-in-out;
+}
+.price-animated:hover {
+    animation: fadeInUp 2s ease-in-out forwards;
+}
+
+
+
+
+
+</style>
+<body class="location-body">
+
+
+    <nav>
+        <img src="files/logo.jpg" class="logo" alt="Logo" style="width: 60px;">
+        <ul class="navbar">
+            <li>
+                <a href="#home">Home</a>
+                <a href="#locations">Locations</a>
+                <a href="#package">Packages</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+<section class="location-section">
+    <div class="location-heading">
+        <h1>
+            <i class="bullet-icon"></i>
+            Discover The <span>Best of Adventure Delight</span>
+        </h1>
+    </div>
+ <div class="location-detail" id="kashmir">
+    <h1 style="color: wheat; ">Adventure Delight <span style="color: aqua">Highlight</span></h1>
+    <h2>5 Days 4 nights</h2>
+
+    <h3 style="margin-bottom: -42px; margin-top: 15px; text-decoration: underline;"><img src="./files/calendar.png" style="margin-right: 14px;" alt="" width="20px" >Itinerary </h3>
+
+
+        <p><h3>Day - 1</h3>Arrive at Port Blair in the morning/afternoon by flight . You will be taken to your
+        hotel where you rest and relax. Later we proceed to Corbyn's Cove. Coastal drive to this
+        beach is awesome, a stretch of around 4 Km with an open sea towards your left is a sight to
+        experience .Later proceed to Cellular Jail(Light &Sound ) - where the heroic saga of the
+        Indian freedom struggle is brought alive, then we proceed to Carbin’s Cove beach .Post
+        completion of this trip, we attend and drop you back at your hotel.</p>
+        <p><h3>Day - 2</h3>Depart from Port Blair to Havelock Island on a ferry. Upon reaching Havelock
+        drop you at your hotel. Later we begin our journey to one of Asia's best beaches, Radha
+        Nagar Beach. Post this we drop you back to your resort where you relax.</p>
+        <p><h3>Day - 3</h3> :- Today, we will let you experience the adventurous activities at havelock
+        Kayaking and Scuba diving .Next in the evening we proceed to Kalapathar beach where
+        you rest and relax near the beach . Upon completion we will drops you at your hotel for
+        overnight stay .</p>
+        <p><h3>Day - 4</h3>After breakfast, we begin our journey back to Port Blair . Upon reaching Port
+        Blair we will drop you at the hotel and afternoon we will proceed to Munda Pahad Trekking
+        Spot (Suicide Point ) and evening sunset point at Chidyatapu beach .</p>
+        <p><h3>Day - 5</h3>Check out from the hotel and proceed to the airport to return home with sweet
+        memories</p>
+ </div>
+
+
+
+
+    </section>
+   <!-- Container to hold both sections -->
+<div class="row content-wrapper">
+    <!-- Side Content on the left -->
+    <div class="col-md-6 side-content">
+        <div class="card blueshade" style="color: #fff;">
+            <div class="card-body">
+                <div style="margin-bottom:5px; color:#fff;">Starting From</div>
+                <h2 class="price-animated" style="margin-bottom:2px; font-weight:600; font-size:32px;">
+                    ₹22,000 <span style="font-size:12px; font-weight:400;">Per Person</span>
+                </h2>
+
+            </div>
+        </div>
+
+        <div class="col-md-6 side-content">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-heading">Get in touch with our travel expert</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="    Your Name" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="   Email Address" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="phone" placeholder="   Phone Number" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" name="travelDate" id="travelDate" placeholder="   Choose Date of Travel" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="pax" placeholder="   No of People" required="">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control message-box" name="message" rows="6" placeholder="Message" required=""></textarea>
+                        </div>
+                        <div class="privacy-notice" style="margin: 10px 0px; line-height: 25px; font-size: 12px; color: #696969;">
+                            <ion-icon name="checkmark-circle-outline" role="img" class="md hydrated"></ion-icon> We assure the privacy of your contact data. <br>
+                            <ion-icon name="checkmark-circle-outline" role="img" class="md hydrated"></ion-icon> This data will only be used by our team to contact you and no other purposes.
+                        </div>
+
+                        <!-- Updated Send Message Button -->
+                        <button type="button" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leave a Reply on the right -->
+        <div class="col-md-6 leave-reply">
+            <div class="card details-accordion" style="margin-top: 20px; padding: 30px;">
+                <div class="card-body dotlist" style="font-size:13px;">
+                    <h1 style="font-weight: 700; margin-bottom: 15px;">Leave a Reply</h1>
+                    <p style="font-size: 14px; color: #e12929d9;">Your email address will not be published. Required fields are marked*</p>
+
+                    <div class="row formset">
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="  Your Name">
+                        </div>
+                        <div class="col-6">
+                            <input type="email" class="form-control" placeholder="  Email Address">
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-floating mt-4 mb-3">
+                                <textarea cols="30" class="form-control" placeholder="  Leave a comment here" id="floatingTextarea" style="min-height: 100px;"></textarea>
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Save my name, email in this browser for the next time I comment.</label>
+                            </div>
+
+                            <!-- Updated Submit Button -->
+                            <button type="button" class="btn-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Footer -->
+
+<section class="footer">
+    <div class="foot">
+        <div class="footer-content">
+
+            <div class="footlinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./register.html">Register</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./files/Terms.pdf" download="Terms & Conditions.pdf">Terms & Conditions</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Connect</h4>
+                <div class="social">
+                    <a href="https://www.instagram.com/andaman_attols?igsh=ZjdmZDdyNW1zYzVt&utm_source=qr" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://wa.me/917063927931" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="mailto:andamanattols@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="end">
+        <p>Copyright © 2024 Andaman Attols All Rights Reserved.<br>Website developed by</p>
+
+</section>
+
+</body>
+<script src="forms.js"></script>
+</html>

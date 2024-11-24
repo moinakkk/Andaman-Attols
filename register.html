@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Here</title>
+    <link rel="icon" href="./files/logo-modified.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body class="register-body">
+
+    <nav>
+        <img src="./files/logo.jpg" class="logo" alt="Logo" style="width: 60px;">
+        <ul class="navbar">
+            <li>
+                <a href="#home">Home</a>
+                <a href="#locations">Locations</a>
+                <a href="#package">Packages</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="registration">
+        <div class="register-form">
+            <h1>Register <span>Here</span></h1>
+            <form id="registerForm">
+                <input type="text" name="myname1" placeholder="Name" id="name" required>
+                <input type="email" name="myemail" placeholder="Email-Id" id="email" required>
+                <input type="tel" name="myphone" placeholder="Phone No." id="phonenum" required>
+                <input type="number" name="myage" placeholder="Age" id="age" required>
+                <h4>Gender</h4>
+                <input type="radio" name="mygender" value="Male" required> Male &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="mygender" value="Female"> Female &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="mygender" value="Others"> Others
+                <h4>Departure</h4>
+                <input type="datetime-local" name="departuredate" id="departuredate" required>
+                <h4>Return</h4>
+                <input type="datetime-local" name="returndate" id="returndate" required>
+                <h4>Travel Destination</h4>
+                <input type="checkbox" name="td" value="Port Blair"> Port Blair &nbsp;
+                <input type="checkbox" name="td" value="Havelock"> Havelock &nbsp;
+                <input type="checkbox" name="td" value="Neil"> Neil &nbsp;
+                <input type="checkbox" name="td" value="Baratang"> Baratang &nbsp;
+                <input type="checkbox" name="td" value="Rangat"> Rangat &nbsp;
+                <input type="checkbox" name="td" value="Diglipur"> Diglipur &nbsp;
+                <br><br>
+                <h4>Package</h4>
+                <input type="radio" name="locations" value="Exotic Andaman" required> Exotic Andaman &nbsp;
+                <br>
+                <input type="radio" name="locations" value="Tropical Andaman"> Tropical Andaman &nbsp;
+                <br>
+                <input type="radio" name="locations" value="Adventure Delight"> Adventure Delight &nbsp;
+                <br>
+                <input type="radio" name="locations" value="Honeymoon Delight"> Honeymoon Delight &nbsp;
+                <br>
+                <input type="radio" name="locations" value="Honeymoon Delight"> Baratang Specials &nbsp;
+                <br><br> 
+                <input type="checkbox" name="t&c" id="tnc" checked required> I accept the Terms & Conditions.
+                <br><br> 
+                <input type="submit" value="Submit" class="submitbtn">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="foot">
+            <div class="footer-content">
+                <div class="footlinks">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./register.html">Register</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="./files/Terms.pdf" download="Terms & Conditions.pdf">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footlinks">
+                    <h4>Connect</h4>
+                    <div class="social">
+                        <a href="https://www.instagram.com/andaman_attols?igsh=ZjdmZDdyNW1zYzVt&utm_source=qr" target="_blank"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://wa.me/917063927931" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="mailto:andamanattols@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="end">
+            <p>Copyright © 2024 Andaman Attols All Rights Reserved.<br>Website developed by</p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="register.js"></script>
+</body>
+</html>
